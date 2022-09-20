@@ -1,4 +1,0 @@
-FROM alpine
-USER root
-WORKINGDIR /
-CMD ["echo", "The Docker File is Build"]
