@@ -1,5 +1,6 @@
-FROM alpine
-USER root
-WORKINGDIR /
-COPY /opt/*.war /app
-CMD ["echo", "The Docker File is Build"]
+FROM tomcat:latest
+LABEL maintainer="Mrunal Thak"
+ADD  ./* /opt/*
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+
