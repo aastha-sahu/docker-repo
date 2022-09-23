@@ -1,6 +1,6 @@
-FROM tomcat:latest
-LABEL maintainer="Mrunal Thak"
-ADD  ./* /opt/*
+FROM centos:7
+RUN yum update -y
+ADD {{ URL }} ./app/
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+CMD ["echo","The image is build with Artifact"]
 
